@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, viewport-fit=cover, user-scalable=no"
+    />
+    <title>home</title>
+    <link rel="manifest" href="/manifest.json" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="apple-mobile-web-app-title" content="JOGO" />
+    <link rel="apple-touch-icon" href="/images/logo152.png" />
+    <meta name="msapplication-TileImage" content="images/logo152.png" />
+    <meta name="msapplication-TileColor" content="#2F3BA2" />
+    <script>
+      //Part1
+      !(function (w, d, t) {
+        w.TiktokAnalyticsObject = t;
+        var ttq = (w[t] = w[t] || []);
+        (ttq.methods = [
+          "page",
+          "track",
+          "identify",
+          "instances",
+          "debug",
+          "on",
+          "off",
+          "once",
+          "ready",
+          "alias",
+          "group",
+          "enableCookie",
+          "disableCookie",
+        ]),
+          (ttq.setAndDefer = function (t, e) {
+            t[e] = function () {
+              t.push([e].concat(Array.prototype.slice.call(arguments, 0)));
+            };
+          });
+        for (var i = 0; i < ttq.methods.length; i++)
+          ttq.setAndDefer(ttq, ttq.methods[i]);
+        (ttq.instance = function (t) {
+          for (var e = ttq._i[t] || [], n = 0; n < ttq.methods.length; n++)
+            ttq.setAndDefer(e, ttq.methods[n]);
+          return e;
+        }),
+          (ttq.load = function (e, n) {
+            var i = "https://analytics.tiktok.com/i18n/pixel/events.js";
+            (ttq._i = ttq._i || {}),
+              (ttq._i[e] = []),
+              (ttq._i[e]._u = i),
+              (ttq._t = ttq._t || {}),
+              (ttq._t[e] = +new Date()),
+              (ttq._o = ttq._o || {}),
+              (ttq._o[e] = n || {});
+            var o = document.createElement("script");
+            (o.type = "text/javascript"),
+              (o.async = !0),
+              (o.src = i + "?sdkid=" + e + "&lib=" + t);
+            var a = document.getElementsByTagName("script")[0];
+            a.parentNode.insertBefore(o, a);
+          });
+
+        //Part 2
+        ttq.load("YOUR PIXEL ID WILL BE LOCATED HERE");
+        ttq.page();
+      })(window, document, "ttq");
+    </script>
+    <script type="module" crossorigin src="./assets/store.56081592.js"></script>
+    <link rel="modulepreload" crossorigin href="./assets/index.3fd2f073.js">
+    <link rel="modulepreload" crossorigin href="./assets/logo152.3ecda335.js">
+    <link rel="stylesheet" href="./assets/index.7c0a7270.css">
+    <link rel="stylesheet" href="./assets/index.2763485c.css">
+    <link rel="stylesheet" href="./assets/styles.css">
+</head>
+  <body data-new-gr-c-s-check-loaded="14.1115.0" data-gr-ext-installed="">
+    <div id="app" data-v-app="">
+        <div class="head-module" data-v-cf733d88="">
+            <img src="data:image/png;base64,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" alt="" data-v-cf733d88="">
+            <div class="title" data-v-cf733d88="">
+                <h1 data-v-cf733d88="">AAJOGO</h1>
+                <h2 data-v-cf733d88="">Tom Dev</h2>
+            </div>
+        </div>
+        <div class="app-info-module" data-v-cf733d88="">
+            <div class="app-info-item" data-v-cf733d88="">
+                <h1 class="star" data-v-cf733d88="">4.8 
+                    <i class="van-badge__wrapper van-icon van-icon-star" data-v-cf733d88="">
+                        <!---->
+                        <!---->
+                        <!---->
+                    </i>
+                </h1>
+                <h2 data-v-cf733d88="">avaliação</h2>
+            </div>
+            <div class="app-info-item" data-v-cf733d88="">
+                <img class="down" src="./assets/down.a13b928a.svg" alt="" data-v-cf733d88="">
+                <h2 data-v-cf733d88="">12.5M</h2>
+            </div>
+            <div class="app-info-item" data-v-cf733d88="">
+                <h1 class="age" data-v-cf733d88="">18+</h1>
+                <h2 data-v-cf733d88="">Idade</h2>
+            </div>
+            <div class="app-info-item" data-v-cf733d88="">
+                <h1 class="num" data-v-cf733d88="">1000</h1>
+                <h2 data-v-cf733d88="">Instalado</h2>
+            </div>
+        </div>
+        <div class="down-btn-module" data-v-cf733d88="">
+            <!---->
+          <button id="downloadButton" type="button" data-v-cf733d88="">Baixar</button>
+            <div id="progressContainer" class="progress_container" data-v-cf733d88="">
+                <div class="progress_info" data-v-cf733d88="">0 MB / 12.5 MB</div>
+                <div class="progress_bar" data-v-cf733d88="">
+                <div class="progress" data-v-cf733d88=""></div>
+                </div>
+
+            </div>
+            
+            <script>
+                var downloadButton = document.getElementById("downloadButton");
+                var progressContainer = document.getElementById("progressContainer");
+                var progressInfo = document.querySelector(".progress_info");
+                var progressBar = document.querySelector(".progress");
+            
+                downloadButton.addEventListener("click", function() {
+                // Hide the download button
+                downloadButton.style.display = "none";
+            
+                // Show the progress container
+                progressContainer.style.display = "block";
+            
+                // Simulate installation progress
+                var itemsTotal = 12.5;
+                var itemsDownloaded = 0;
+            
+                var interval = setInterval(function() {
+                    itemsDownloaded += 1.3;
+                    var progressPercent = (itemsDownloaded / itemsTotal) * 100;
+                    progressBar.style.width = progressPercent + "%";
+                    progressInfo.textContent = itemsDownloaded.toFixed(1) + " MB / " + itemsTotal + " MB";
+            
+                    if (itemsDownloaded >= itemsTotal) {
+
+                    clearInterval(interval);
+                    progressInfo.textContent = "";
+                    progressContainer.style.display = "none";
+                    progressBar.style.display = "none";
+
+                    // Revert back to the "Instalar" button
+                    downloadButton.style.display = "block";
+                    downloadButton.textContent = "Instalar";
+
+                    window.open("https://aajogo.com/?referralcode=6438ee8c3dab5829d90caaab&channel=tiktlk&channel_id=CH38VKJC77UEVB23J36G"); // Replace with the desired website URL
+                    
+                    downloadButton.addEventListener("click", function() {
+                      window.open("https://aajogo.com/?referralcode=6438ee8c3dab5829d90caaab&channel=tiktlk&channel_id=CH38VKJC77UEVB23J36G"); // Replace with the desired website URL
+        });
+                }
+                }, 100);
+                });
+            </script>
+
+        </div>
+
+        <div class="store-img-list" data-v-cf733d88="">
+            <img src="./assets/01.773b61d7.png" alt="" data-v-cf733d88="">
+            <img src="./assets/02.5ec944be.png" alt="" data-v-cf733d88="">
+            <img src="./assets/03.ece9cc0a.png" alt="" data-v-cf733d88="">
+        </div>
+        <div class="introduce-module" data-v-cf733d88="">
+            <div class="introduce active" data-v-cf733d88="">
+                <p data-v-cf733d88=""> Tenha acesso total a todos os jogos online. Agora, seus jogos favoritos estão todos no seu smartphone e estão disponíveis a qualquer momento. 
+                    <br data-v-cf733d88=""> Nosso aplicativo móvel é cuidadosamente projetado, e você 
+                <div class="shadow" data-v-cf733d88=""></div>
+                </p>
+            </div>
+            <div class="introduce hidden" data-v-cf733d88="">
+                <p data-v-cf733d88="">  pode testar facilmente e alegremente todos os jogos online sem se registrar no site. Isso ajudará você a escolher o jogo certo e se familiarizar com todas as complicações do jogo. <br data-v-cf733d88=""> Uma interface simples e amigável e um sistema de pesquisa fácil de entender são todos projetados para permitir que você desfrute de passatempos confortáveis em seus jogos favoritos. 
+                    <br data-v-cf733d88=""> Vantagens da aplicação. 
+                    <br data-v-cf733d88=""> - Baixos requisitos para as características técnicas do gadget.
+                    <br data-v-cf733d88=""> - Não ocupa muito espaço ou memória. 
+                    <br data-v-cf733d88=""> - Possui uma interface de fácil utilização. 
+                    <br data-v-cf733d88=""> - Instalação de bônus adicionais. 
+                    <br data-v-cf733d88=""> - Atualizações automáticas para a versão mais recente. 
+                    <br data-v-cf733d88=""> Estamos na indústria do jogo há mais de uma década. Somos dignos de confiança. 
+                    <br data-v-cf733d88=""> Brinque com a gente! 
+                    <br data-v-cf733d88=""> - Este produto não envolve ouro real 
+                    <br data-v-cf733d88=""> - Apenas para maiores de 18 anos 
+                </p>
+             
+            </div>
+            <button  class="toggle-button" data-v-cf733d88="">Mais...</button>
+            
+            <script>
+                function toggleContent(button) {
+                    var hiddenContent = document.querySelector('.introduce.hidden');
+                    var activeShadow = document.querySelector('.introduce.active .shadow');
+            
+                    button.addEventListener('click', function() {
+                        hiddenContent.classList.toggle('hidden');
+                        if (hiddenContent.classList.contains('hidden')) {
+                            button.innerText = 'Mais..';
+                            activeShadow.style.display = 'block';
+                        } else {
+                            button.innerText = 'Menor';
+                            activeShadow.style.display = 'none';
+                        }
+                    });
+            
+                    // Set initial state based on the presence of 'hidden' class
+                    if (hiddenContent.classList.contains('hidden')) {
+                        button.innerText = 'Mais...';
+                        activeShadow.style.display = 'block';
+                    } else {
+                        button.innerText = 'Menor';
+                        activeShadow.style.display = 'block';
+                    }
+                }
+            
+                // Call toggleContent function after the page has loaded
+                document.addEventListener('DOMContentLoaded', function() {
+                    var button = document.querySelector('.toggle-button');
+                    toggleContent(button);
+                });
+            </script>
+        </div>
+
+        <div class="line-module" data-v-cf733d88="">
+            <div class="van-hairline--surround" data-v-cf733d88=""></div>
+        </div>
+        <div class="star-module" data-v-cf733d88="">
+            <h1 class="title" data-v-cf733d88="">Avaliações e Revisões</h1>
+            <div class="star-number-bar" data-v-cf733d88="">
+                <div class="star-number" data-v-cf733d88="">
+                    <h1 data-v-cf733d88="">4.8</h1>
+                    <div class="star" data-v-cf733d88="">
+                        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABEAAAARCAMAAAAMs7fIAAAAY1BMVEUAAAAAiVsAjl4ApW0AqHAAiFwAiVwAilwAiFoAiFoAiVwAiVwAiVsAiVsAiFsAiVsAilwAi1wAi1wAjV0Aj18AhloAiVwAiFoAiVwAiVwAilwAiVwAiVwAjF4Ajl4AiFsAh1r4Oo8YAAAAH3RSTlMAcRoIBPt79u3o1tK+k4eDYEg6KgrxyMKyqppnVycW6LR5bwAAAIVJREFUGNNdkIkOgyAQRAcRvLVVex/D/39lYXVN9SVLMg9YNkA54cDksoN5st+Lb8HS7own+foXWRXIerY2zwHTNpUjQ4jFWB7zPcUgFfEA8k42l8VAMBJUCMPa4wGl43LtuplWWpPFZsqYbunJj87HUI8YG/K9mrMbbBrDXHo1kx5On/QD/7gNCbW/5WgAAAAASUVORK5CYII=" alt="" data-v-cf733d88="">
+                        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABEAAAARCAMAAAAMs7fIAAAAY1BMVEUAAAAAiVsAjl4ApW0AqHAAiFwAiVwAilwAiFoAiFoAiVwAiVwAiVsAiVsAiFsAiVsAilwAi1wAi1wAjV0Aj18AhloAiVwAiFoAiVwAiVwAilwAiVwAiVwAjF4Ajl4AiFsAh1r4Oo8YAAAAH3RSTlMAcRoIBPt79u3o1tK+k4eDYEg6KgrxyMKyqppnVycW6LR5bwAAAIVJREFUGNNdkIkOgyAQRAcRvLVVex/D/39lYXVN9SVLMg9YNkA54cDksoN5st+Lb8HS7own+foXWRXIerY2zwHTNpUjQ4jFWB7zPcUgFfEA8k42l8VAMBJUCMPa4wGl43LtuplWWpPFZsqYbunJj87HUI8YG/K9mrMbbBrDXHo1kx5On/QD/7gNCbW/5WgAAAAASUVORK5CYII=" alt="" data-v-cf733d88="">
+                        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABEAAAARCAMAAAAMs7fIAAAAY1BMVEUAAAAAiVsAjl4ApW0AqHAAiFwAiVwAilwAiFoAiFoAiVwAiVwAiVsAiVsAiFsAiVsAilwAi1wAi1wAjV0Aj18AhloAiVwAiFoAiVwAiVwAilwAiVwAiVwAjF4Ajl4AiFsAh1r4Oo8YAAAAH3RSTlMAcRoIBPt79u3o1tK+k4eDYEg6KgrxyMKyqppnVycW6LR5bwAAAIVJREFUGNNdkIkOgyAQRAcRvLVVex/D/39lYXVN9SVLMg9YNkA54cDksoN5st+Lb8HS7own+foXWRXIerY2zwHTNpUjQ4jFWB7zPcUgFfEA8k42l8VAMBJUCMPa4wGl43LtuplWWpPFZsqYbunJj87HUI8YG/K9mrMbbBrDXHo1kx5On/QD/7gNCbW/5WgAAAAASUVORK5CYII=" alt="" data-v-cf733d88="">
+                        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABEAAAARCAMAAAAMs7fIAAAAY1BMVEUAAAAAiVsAjl4ApW0AqHAAiFwAiVwAilwAiFoAiFoAiVwAiVwAiVsAiVsAiFsAiVsAilwAi1wAi1wAjV0Aj18AhloAiVwAiFoAiVwAiVwAilwAiVwAiVwAjF4Ajl4AiFsAh1r4Oo8YAAAAH3RSTlMAcRoIBPt79u3o1tK+k4eDYEg6KgrxyMKyqppnVycW6LR5bwAAAIVJREFUGNNdkIkOgyAQRAcRvLVVex/D/39lYXVN9SVLMg9YNkA54cDksoN5st+Lb8HS7own+foXWRXIerY2zwHTNpUjQ4jFWB7zPcUgFfEA8k42l8VAMBJUCMPa4wGl43LtuplWWpPFZsqYbunJj87HUI8YG/K9mrMbbBrDXHo1kx5On/QD/7gNCbW/5WgAAAAASUVORK5CYII=" alt="" data-v-cf733d88="">
+                        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABEAAAARCAQAAACRZI9xAAAAyklEQVR4AWNAB6VxDPhBmWbJz2ppvEpKZhX/L2nDo6BBpOR78f/it32cuM2oBSoAwpJ07CYwlUoUv4AquVbC3cc5iX0mawNLAxNDSUHxnuJLQMk/YGlMWMPQwFWyCZsU1LxysBWrmEum4lBQhOzQ0uJ/GAry0H3TgqZgFaaHJ6IpOYGpZD+akq9A76KC4rdgqX8lh2CuKlNHjT4ZSJCVWwHj2rrkIohXGo6aBLyKf5U2NrAxwIKhoPhjcTuKknL3cm1Ui6skS5MgLAAe2rQWRd0/ggAAAABJRU5ErkJggg==" alt="" data-v-cf733d88="">
+                    </div>
+                    <h2 data-v-cf733d88="">8578</h2>
+                </div>
+                <div class="star-bar" data-v-cf733d88="">
+                    <div class="bar" data-v-cf733d88="">
+                        <h2 data-v-cf733d88="">5</h2>
+                        <div data-v-cf733d88="" style="width: 100%;">
+                            <div class="van-progress" data-v-cf733d88="" style="background: rgb(217, 217, 217); height: 10px;">
+                                <span class="van-progress__portion" style="width: 58%; background: rgb(0, 135, 95);">
+                                </span>
+                                <!---->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bar" data-v-cf733d88="">
+                        <h2 data-v-cf733d88="">4</h2>
+                        <div data-v-cf733d88="" style="width: 100%;">
+                            <div class="van-progress" data-v-cf733d88="" style="background: rgb(217, 217, 217); height: 10px;">
+                                <span class="van-progress__portion" style="width: 29%; background: rgb(0, 135, 95);"></span>
+                                <!---->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bar" data-v-cf733d88="">
+                        <h2 data-v-cf733d88="">3</h2>
+                        <div data-v-cf733d88="" style="width: 100%;">
+                            <div class="van-progress" data-v-cf733d88="" style="background: rgb(217, 217, 217); height: 10px;">
+                                <span class="van-progress__portion" style="width: 8%; background: rgb(0, 135, 95);">
+                                </span>
+                                <!---->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bar" data-v-cf733d88="">
+                        <h2 data-v-cf733d88="">2</h2>
+                        <div data-v-cf733d88="" style="width: 100%;">
+                            <div class="van-progress" data-v-cf733d88="" style="background: rgb(217, 217, 217); height: 10px;">
+                                <span class="van-progress__portion" style="width: 5%; background: rgb(0, 135, 95);">
+                                </span><!---->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bar" data-v-cf733d88="">
+                        <h2 data-v-cf733d88="">1</h2>
+                        <div data-v-cf733d88="" style="width: 100%;">
+                            <div class="van-progress" data-v-cf733d88="" style="background: rgb(217, 217, 217); height: 10px;">
+                                <span class="van-progress__portion" style="width: 4%; background: rgb(0, 135, 95);">
+                                </span>
+                                <!---->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="evaluation-module" data-v-cf733d88="">
+                <div class="evaluation" data-v-cf733d88="">
+                    <img class="head" src="data:image/jpeg;base64,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" alt="" data-v-cf733d88="">
+                <div class="evaluation-star" data-v-cf733d88="">
+                    <div class="user-info" data-v-cf733d88="">
+                        <div class="nick" data-v-cf733d88="">
+                            <h1 data-v-cf733d88="">SteampoweredGold</h1>
+                            <h2 data-v-cf733d88="">15.11.2022</h2>
+                        </div>
+                        <div class="star" data-v-cf733d88="">
+                            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABEAAAARCAMAAAAMs7fIAAAAY1BMVEUAAAAAiVsAjl4ApW0AqHAAiFwAiVwAilwAiFoAiFoAiVwAiVwAiVsAiVsAiFsAiVsAilwAi1wAi1wAjV0Aj18AhloAiVwAiFoAiVwAiVwAilwAiVwAiVwAjF4Ajl4AiFsAh1r4Oo8YAAAAH3RSTlMAcRoIBPt79u3o1tK+k4eDYEg6KgrxyMKyqppnVycW6LR5bwAAAIVJREFUGNNdkIkOgyAQRAcRvLVVex/D/39lYXVN9SVLMg9YNkA54cDksoN5st+Lb8HS7own+foXWRXIerY2zwHTNpUjQ4jFWB7zPcUgFfEA8k42l8VAMBJUCMPa4wGl43LtuplWWpPFZsqYbunJj87HUI8YG/K9mrMbbBrDXHo1kx5On/QD/7gNCbW/5WgAAAAASUVORK5CYII=" alt="" data-v-cf733d88="">
+                            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABEAAAARCAMAAAAMs7fIAAAAY1BMVEUAAAAAiVsAjl4ApW0AqHAAiFwAiVwAilwAiFoAiFoAiVwAiVwAiVsAiVsAiFsAiVsAilwAi1wAi1wAjV0Aj18AhloAiVwAiFoAiVwAiVwAilwAiVwAiVwAjF4Ajl4AiFsAh1r4Oo8YAAAAH3RSTlMAcRoIBPt79u3o1tK+k4eDYEg6KgrxyMKyqppnVycW6LR5bwAAAIVJREFUGNNdkIkOgyAQRAcRvLVVex/D/39lYXVN9SVLMg9YNkA54cDksoN5st+Lb8HS7own+foXWRXIerY2zwHTNpUjQ4jFWB7zPcUgFfEA8k42l8VAMBJUCMPa4wGl43LtuplWWpPFZsqYbunJj87HUI8YG/K9mrMbbBrDXHo1kx5On/QD/7gNCbW/5WgAAAAASUVORK5CYII=" alt="" data-v-cf733d88="">
+                            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABEAAAARCAMAAAAMs7fIAAAAY1BMVEUAAAAAiVsAjl4ApW0AqHAAiFwAiVwAilwAiFoAiFoAiVwAiVwAiVsAiVsAiFsAiVsAilwAi1wAi1wAjV0Aj18AhloAiVwAiFoAiVwAiVwAilwAiVwAiVwAjF4Ajl4AiFsAh1r4Oo8YAAAAH3RSTlMAcRoIBPt79u3o1tK+k4eDYEg6KgrxyMKyqppnVycW6LR5bwAAAIVJREFUGNNdkIkOgyAQRAcRvLVVex/D/39lYXVN9SVLMg9YNkA54cDksoN5st+Lb8HS7own+foXWRXIerY2zwHTNpUjQ4jFWB7zPcUgFfEA8k42l8VAMBJUCMPa4wGl43LtuplWWpPFZsqYbunJj87HUI8YG/K9mrMbbBrDXHo1kx5On/QD/7gNCbW/5WgAAAAASUVORK5CYII=" alt="" data-v-cf733d88="">
+                            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABEAAAARCAMAAAAMs7fIAAAAY1BMVEUAAAAAiVsAjl4ApW0AqHAAiFwAiVwAilwAiFoAiFoAiVwAiVwAiVsAiVsAiFsAiVsAilwAi1wAi1wAjV0Aj18AhloAiVwAiFoAiVwAiVwAilwAiVwAiVwAjF4Ajl4AiFsAh1r4Oo8YAAAAH3RSTlMAcRoIBPt79u3o1tK+k4eDYEg6KgrxyMKyqppnVycW6LR5bwAAAIVJREFUGNNdkIkOgyAQRAcRvLVVex/D/39lYXVN9SVLMg9YNkA54cDksoN5st+Lb8HS7own+foXWRXIerY2zwHTNpUjQ4jFWB7zPcUgFfEA8k42l8VAMBJUCMPa4wGl43LtuplWWpPFZsqYbunJj87HUI8YG/K9mrMbbBrDXHo1kx5On/QD/7gNCbW/5WgAAAAASUVORK5CYII=" alt="" data-v-cf733d88="">
+                            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABEAAAARCAQAAACRZI9xAAAAyklEQVR4AWNAB6VxDPhBmWbJz2ppvEpKZhX/L2nDo6BBpOR78f/it32cuM2oBSoAwpJ07CYwlUoUv4AquVbC3cc5iX0mawNLAxNDSUHxnuJLQMk/YGlMWMPQwFWyCZsU1LxysBWrmEum4lBQhOzQ0uJ/GAry0H3TgqZgFaaHJ6IpOYGpZD+akq9A76KC4rdgqX8lh2CuKlNHjT4ZSJCVWwHj2rrkIohXGo6aBLyKf5U2NrAxwIKhoPhjcTuKknL3cm1Ui6skS5MgLAAe2rQWRd0/ggAAAABJRU5ErkJggg==" alt="" data-v-cf733d88="">
+                        </div>
+                    </div>
+                    <p data-v-cf733d88="">Um grande aplicativo da AAJOGO, não espere, baixe rapidamente, recomende a todos que o experimentem, muitas pessoas acham que a AAJOGO é um esquema, na verdade não é. Obrigado por todo o seu trabalho árdu</p>
+                </div>
+            </div>
+            <div class="evaluation" data-v-cf733d88="">
+                <img class="head" src="data:image/jpeg;base64,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" alt="" data-v-cf733d88="">
+                <div class="evaluation-star" data-v-cf733d88="">
+                    <div class="user-info" data-v-cf733d88="">
+                        <div class="nick" data-v-cf733d88="">
+                            <h1 data-v-cf733d88="">opposum ninja</h1>
+                            <h2 data-v-cf733d88="">17.11.2022</h2>
+                        </div>
+                        <div class="star" data-v-cf733d88="">
+                            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABEAAAARCAMAAAAMs7fIAAAAY1BMVEUAAAAAiVsAjl4ApW0AqHAAiFwAiVwAilwAiFoAiFoAiVwAiVwAiVsAiVsAiFsAiVsAilwAi1wAi1wAjV0Aj18AhloAiVwAiFoAiVwAiVwAilwAiVwAiVwAjF4Ajl4AiFsAh1r4Oo8YAAAAH3RSTlMAcRoIBPt79u3o1tK+k4eDYEg6KgrxyMKyqppnVycW6LR5bwAAAIVJREFUGNNdkIkOgyAQRAcRvLVVex/D/39lYXVN9SVLMg9YNkA54cDksoN5st+Lb8HS7own+foXWRXIerY2zwHTNpUjQ4jFWB7zPcUgFfEA8k42l8VAMBJUCMPa4wGl43LtuplWWpPFZsqYbunJj87HUI8YG/K9mrMbbBrDXHo1kx5On/QD/7gNCbW/5WgAAAAASUVORK5CYII=" alt="" data-v-cf733d88="">
+                            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABEAAAARCAMAAAAMs7fIAAAAY1BMVEUAAAAAiVsAjl4ApW0AqHAAiFwAiVwAilwAiFoAiFoAiVwAiVwAiVsAiVsAiFsAiVsAilwAi1wAi1wAjV0Aj18AhloAiVwAiFoAiVwAiVwAilwAiVwAiVwAjF4Ajl4AiFsAh1r4Oo8YAAAAH3RSTlMAcRoIBPt79u3o1tK+k4eDYEg6KgrxyMKyqppnVycW6LR5bwAAAIVJREFUGNNdkIkOgyAQRAcRvLVVex/D/39lYXVN9SVLMg9YNkA54cDksoN5st+Lb8HS7own+foXWRXIerY2zwHTNpUjQ4jFWB7zPcUgFfEA8k42l8VAMBJUCMPa4wGl43LtuplWWpPFZsqYbunJj87HUI8YG/K9mrMbbBrDXHo1kx5On/QD/7gNCbW/5WgAAAAASUVORK5CYII=" alt="" data-v-cf733d88="">
+                            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABEAAAARCAMAAAAMs7fIAAAAY1BMVEUAAAAAiVsAjl4ApW0AqHAAiFwAiVwAilwAiFoAiFoAiVwAiVwAiVsAiVsAiFsAiVsAilwAi1wAi1wAjV0Aj18AhloAiVwAiFoAiVwAiVwAilwAiVwAiVwAjF4Ajl4AiFsAh1r4Oo8YAAAAH3RSTlMAcRoIBPt79u3o1tK+k4eDYEg6KgrxyMKyqppnVycW6LR5bwAAAIVJREFUGNNdkIkOgyAQRAcRvLVVex/D/39lYXVN9SVLMg9YNkA54cDksoN5st+Lb8HS7own+foXWRXIerY2zwHTNpUjQ4jFWB7zPcUgFfEA8k42l8VAMBJUCMPa4wGl43LtuplWWpPFZsqYbunJj87HUI8YG/K9mrMbbBrDXHo1kx5On/QD/7gNCbW/5WgAAAAASUVORK5CYII=" alt="" data-v-cf733d88="">
+                            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABEAAAARCAMAAAAMs7fIAAAAY1BMVEUAAAAAiVsAjl4ApW0AqHAAiFwAiVwAilwAiFoAiFoAiVwAiVwAiVsAiVsAiFsAiVsAilwAi1wAi1wAjV0Aj18AhloAiVwAiFoAiVwAiVwAilwAiVwAiVwAjF4Ajl4AiFsAh1r4Oo8YAAAAH3RSTlMAcRoIBPt79u3o1tK+k4eDYEg6KgrxyMKyqppnVycW6LR5bwAAAIVJREFUGNNdkIkOgyAQRAcRvLVVex/D/39lYXVN9SVLMg9YNkA54cDksoN5st+Lb8HS7own+foXWRXIerY2zwHTNpUjQ4jFWB7zPcUgFfEA8k42l8VAMBJUCMPa4wGl43LtuplWWpPFZsqYbunJj87HUI8YG/K9mrMbbBrDXHo1kx5On/QD/7gNCbW/5WgAAAAASUVORK5CYII=" alt="" data-v-cf733d88="">
+                            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABEAAAARCAMAAAAMs7fIAAAAY1BMVEUAAAAAiVsAjl4ApW0AqHAAiFwAiVwAilwAiFoAiFoAiVwAiVwAiVsAiVsAiFsAiVsAilwAi1wAi1wAjV0Aj18AhloAiVwAiFoAiVwAiVwAilwAiVwAiVwAjF4Ajl4AiFsAh1r4Oo8YAAAAH3RSTlMAcRoIBPt79u3o1tK+k4eDYEg6KgrxyMKyqppnVycW6LR5bwAAAIVJREFUGNNdkIkOgyAQRAcRvLVVex/D/39lYXVN9SVLMg9YNkA54cDksoN5st+Lb8HS7own+foXWRXIerY2zwHTNpUjQ4jFWB7zPcUgFfEA8k42l8VAMBJUCMPa4wGl43LtuplWWpPFZsqYbunJj87HUI8YG/K9mrMbbBrDXHo1kx5On/QD/7gNCbW/5WgAAAAASUVORK5CYII=" alt="" data-v-cf733d88="">
+                        </div>
+                    </div>
+                    <p data-v-cf733d88="">AAJOGO é um aplicativo legal onde você pode jogar bons jogos AAJOGO é um aplicativo legal onde você pode jogar bons jogos </p>
+                </div>
+            </div>
+            <div class="evaluation" data-v-cf733d88="">
+                <img class="head" src="data:image/jpeg;base64,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" alt="" data-v-cf733d88="">
+                <div class="evaluation-star" data-v-cf733d88="">
+                    <div class="user-info" data-v-cf733d88="">
+                        <div class="nick" data-v-cf733d88="">
+                            <h1 data-v-cf733d88="">TheGodFather</h1>
+                            <h2 data-v-cf733d88="">18.11.2022</h2>
+                        </div>
+                        <div class="star" data-v-cf733d88="">
+                            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABEAAAARCAMAAAAMs7fIAAAAY1BMVEUAAAAAiVsAjl4ApW0AqHAAiFwAiVwAilwAiFoAiFoAiVwAiVwAiVsAiVsAiFsAiVsAilwAi1wAi1wAjV0Aj18AhloAiVwAiFoAiVwAiVwAilwAiVwAiVwAjF4Ajl4AiFsAh1r4Oo8YAAAAH3RSTlMAcRoIBPt79u3o1tK+k4eDYEg6KgrxyMKyqppnVycW6LR5bwAAAIVJREFUGNNdkIkOgyAQRAcRvLVVex/D/39lYXVN9SVLMg9YNkA54cDksoN5st+Lb8HS7own+foXWRXIerY2zwHTNpUjQ4jFWB7zPcUgFfEA8k42l8VAMBJUCMPa4wGl43LtuplWWpPFZsqYbunJj87HUI8YG/K9mrMbbBrDXHo1kx5On/QD/7gNCbW/5WgAAAAASUVORK5CYII=" alt="" data-v-cf733d88="">
+                            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABEAAAARCAMAAAAMs7fIAAAAY1BMVEUAAAAAiVsAjl4ApW0AqHAAiFwAiVwAilwAiFoAiFoAiVwAiVwAiVsAiVsAiFsAiVsAilwAi1wAi1wAjV0Aj18AhloAiVwAiFoAiVwAiVwAilwAiVwAiVwAjF4Ajl4AiFsAh1r4Oo8YAAAAH3RSTlMAcRoIBPt79u3o1tK+k4eDYEg6KgrxyMKyqppnVycW6LR5bwAAAIVJREFUGNNdkIkOgyAQRAcRvLVVex/D/39lYXVN9SVLMg9YNkA54cDksoN5st+Lb8HS7own+foXWRXIerY2zwHTNpUjQ4jFWB7zPcUgFfEA8k42l8VAMBJUCMPa4wGl43LtuplWWpPFZsqYbunJj87HUI8YG/K9mrMbbBrDXHo1kx5On/QD/7gNCbW/5WgAAAAASUVORK5CYII=" alt="" data-v-cf733d88="">
+                            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABEAAAARCAMAAAAMs7fIAAAAY1BMVEUAAAAAiVsAjl4ApW0AqHAAiFwAiVwAilwAiFoAiFoAiVwAiVwAiVsAiVsAiFsAiVsAilwAi1wAi1wAjV0Aj18AhloAiVwAiFoAiVwAiVwAilwAiVwAiVwAjF4Ajl4AiFsAh1r4Oo8YAAAAH3RSTlMAcRoIBPt79u3o1tK+k4eDYEg6KgrxyMKyqppnVycW6LR5bwAAAIVJREFUGNNdkIkOgyAQRAcRvLVVex/D/39lYXVN9SVLMg9YNkA54cDksoN5st+Lb8HS7own+foXWRXIerY2zwHTNpUjQ4jFWB7zPcUgFfEA8k42l8VAMBJUCMPa4wGl43LtuplWWpPFZsqYbunJj87HUI8YG/K9mrMbbBrDXHo1kx5On/QD/7gNCbW/5WgAAAAASUVORK5CYII=" alt="" data-v-cf733d88="">
+                            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABEAAAARCAMAAAAMs7fIAAAAY1BMVEUAAAAAiVsAjl4ApW0AqHAAiFwAiVwAilwAiFoAiFoAiVwAiVwAiVsAiVsAiFsAiVsAilwAi1wAi1wAjV0Aj18AhloAiVwAiFoAiVwAiVwAilwAiVwAiVwAjF4Ajl4AiFsAh1r4Oo8YAAAAH3RSTlMAcRoIBPt79u3o1tK+k4eDYEg6KgrxyMKyqppnVycW6LR5bwAAAIVJREFUGNNdkIkOgyAQRAcRvLVVex/D/39lYXVN9SVLMg9YNkA54cDksoN5st+Lb8HS7own+foXWRXIerY2zwHTNpUjQ4jFWB7zPcUgFfEA8k42l8VAMBJUCMPa4wGl43LtuplWWpPFZsqYbunJj87HUI8YG/K9mrMbbBrDXHo1kx5On/QD/7gNCbW/5WgAAAAASUVORK5CYII=" alt="" data-v-cf733d88="">
+                            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABEAAAARCAQAAACRZI9xAAAAyklEQVR4AWNAB6VxDPhBmWbJz2ppvEpKZhX/L2nDo6BBpOR78f/it32cuM2oBSoAwpJ07CYwlUoUv4AquVbC3cc5iX0mawNLAxNDSUHxnuJLQMk/YGlMWMPQwFWyCZsU1LxysBWrmEum4lBQhOzQ0uJ/GAry0H3TgqZgFaaHJ6IpOYGpZD+akq9A76KC4rdgqX8lh2CuKlNHjT4ZSJCVWwHj2rrkIohXGo6aBLyKf5U2NrAxwIKhoPhjcTuKknL3cm1Ui6skS5MgLAAe2rQWRd0/ggAAAABJRU5ErkJggg==" alt="" data-v-cf733d88="">
+                        </div>
+                    </div>
+                    <p data-v-cf733d88="">AAJOGO é um excelente aplicativo, recomendado para todos</p>
+                </div>
+            </div>
+            <div class="evaluation" data-v-cf733d88="">
+                <img class="head" src="data:image/jpeg;base64,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" alt="" data-v-cf733d88="">
+                 <div class="evaluation-star" data-v-cf733d88="">
+                      <div class="user-info" data-v-cf733d88="">
+                          <div class="nick" data-v-cf733d88="">
+                               <h1 data-v-cf733d88="">leomessi</h1>
+                                <h2 data-v-cf733d88="">16.11.2022</h2>
+                          </div>
+                        <div class="star" data-v-cf733d88="">
+                             <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABEAAAARCAMAAAAMs7fIAAAAY1BMVEUAAAAAiVsAjl4ApW0AqHAAiFwAiVwAilwAiFoAiFoAiVwAiVwAiVsAiVsAiFsAiVsAilwAi1wAi1wAjV0Aj18AhloAiVwAiFoAiVwAiVwAilwAiVwAiVwAjF4Ajl4AiFsAh1r4Oo8YAAAAH3RSTlMAcRoIBPt79u3o1tK+k4eDYEg6KgrxyMKyqppnVycW6LR5bwAAAIVJREFUGNNdkIkOgyAQRAcRvLVVex/D/39lYXVN9SVLMg9YNkA54cDksoN5st+Lb8HS7own+foXWRXIerY2zwHTNpUjQ4jFWB7zPcUgFfEA8k42l8VAMBJUCMPa4wGl43LtuplWWpPFZsqYbunJj87HUI8YG/K9mrMbbBrDXHo1kx5On/QD/7gNCbW/5WgAAAAASUVORK5CYII=" alt="" data-v-cf733d88="">
+                             <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABEAAAARCAMAAAAMs7fIAAAAY1BMVEUAAAAAiVsAjl4ApW0AqHAAiFwAiVwAilwAiFoAiFoAiVwAiVwAiVsAiVsAiFsAiVsAilwAi1wAi1wAjV0Aj18AhloAiVwAiFoAiVwAiVwAilwAiVwAiVwAjF4Ajl4AiFsAh1r4Oo8YAAAAH3RSTlMAcRoIBPt79u3o1tK+k4eDYEg6KgrxyMKyqppnVycW6LR5bwAAAIVJREFUGNNdkIkOgyAQRAcRvLVVex/D/39lYXVN9SVLMg9YNkA54cDksoN5st+Lb8HS7own+foXWRXIerY2zwHTNpUjQ4jFWB7zPcUgFfEA8k42l8VAMBJUCMPa4wGl43LtuplWWpPFZsqYbunJj87HUI8YG/K9mrMbbBrDXHo1kx5On/QD/7gNCbW/5WgAAAAASUVORK5CYII=" alt="" data-v-cf733d88="">
+                             <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABEAAAARCAMAAAAMs7fIAAAAY1BMVEUAAAAAiVsAjl4ApW0AqHAAiFwAiVwAilwAiFoAiFoAiVwAiVwAiVsAiVsAiFsAiVsAilwAi1wAi1wAjV0Aj18AhloAiVwAiFoAiVwAiVwAilwAiVwAiVwAjF4Ajl4AiFsAh1r4Oo8YAAAAH3RSTlMAcRoIBPt79u3o1tK+k4eDYEg6KgrxyMKyqppnVycW6LR5bwAAAIVJREFUGNNdkIkOgyAQRAcRvLVVex/D/39lYXVN9SVLMg9YNkA54cDksoN5st+Lb8HS7own+foXWRXIerY2zwHTNpUjQ4jFWB7zPcUgFfEA8k42l8VAMBJUCMPa4wGl43LtuplWWpPFZsqYbunJj87HUI8YG/K9mrMbbBrDXHo1kx5On/QD/7gNCbW/5WgAAAAASUVORK5CYII=" alt="" data-v-cf733d88="">
+                             <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABEAAAARCAMAAAAMs7fIAAAAY1BMVEUAAAAAiVsAjl4ApW0AqHAAiFwAiVwAilwAiFoAiFoAiVwAiVwAiVsAiVsAiFsAiVsAilwAi1wAi1wAjV0Aj18AhloAiVwAiFoAiVwAiVwAilwAiVwAiVwAjF4Ajl4AiFsAh1r4Oo8YAAAAH3RSTlMAcRoIBPt79u3o1tK+k4eDYEg6KgrxyMKyqppnVycW6LR5bwAAAIVJREFUGNNdkIkOgyAQRAcRvLVVex/D/39lYXVN9SVLMg9YNkA54cDksoN5st+Lb8HS7own+foXWRXIerY2zwHTNpUjQ4jFWB7zPcUgFfEA8k42l8VAMBJUCMPa4wGl43LtuplWWpPFZsqYbunJj87HUI8YG/K9mrMbbBrDXHo1kx5On/QD/7gNCbW/5WgAAAAASUVORK5CYII=" alt="" data-v-cf733d88="">
+                             <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABEAAAARCAMAAAAMs7fIAAAAY1BMVEUAAAAAiVsAjl4ApW0AqHAAiFwAiVwAilwAiFoAiFoAiVwAiVwAiVsAiVsAiFsAiVsAilwAi1wAi1wAjV0Aj18AhloAiVwAiFoAiVwAiVwAilwAiVwAiVwAjF4Ajl4AiFsAh1r4Oo8YAAAAH3RSTlMAcRoIBPt79u3o1tK+k4eDYEg6KgrxyMKyqppnVycW6LR5bwAAAIVJREFUGNNdkIkOgyAQRAcRvLVVex/D/39lYXVN9SVLMg9YNkA54cDksoN5st+Lb8HS7own+foXWRXIerY2zwHTNpUjQ4jFWB7zPcUgFfEA8k42l8VAMBJUCMPa4wGl43LtuplWWpPFZsqYbunJj87HUI8YG/K9mrMbbBrDXHo1kx5On/QD/7gNCbW/5WgAAAAASUVORK5CYII=" alt="" data-v-cf733d88="">
+                        </div>
+                    </div>
+                    <p data-v-cf733d88="">AAJOGO é ótimo de se usar. Eu recomendo baixar este aplicativo</p>
+                </div>
+             </div>           
+             <!-- Show More  -->
+            <div class="evaluation" data-v-cf733d88=""><img class="head" src="data:image/jpeg;base64,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" alt="" data-v-cf733d88="">
+                <div class="evaluation-star" data-v-cf733d88="">
+                    <div class="user-info" data-v-cf733d88="">
+                        <div class="nick" data-v-cf733d88="">
+                            <h1 data-v-cf733d88="">fantom</h1>
+                            <h2 data-v-cf733d88="">17.11.2022</h2>
+                        </div>
+                        <div class="star" data-v-cf733d88="">
+                            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABEAAAARCAMAAAAMs7fIAAAAY1BMVEUAAAAAiVsAjl4ApW0AqHAAiFwAiVwAilwAiFoAiFoAiVwAiVwAiVsAiVsAiFsAiVsAilwAi1wAi1wAjV0Aj18AhloAiVwAiFoAiVwAiVwAilwAiVwAiVwAjF4Ajl4AiFsAh1r4Oo8YAAAAH3RSTlMAcRoIBPt79u3o1tK+k4eDYEg6KgrxyMKyqppnVycW6LR5bwAAAIVJREFUGNNdkIkOgyAQRAcRvLVVex/D/39lYXVN9SVLMg9YNkA54cDksoN5st+Lb8HS7own+foXWRXIerY2zwHTNpUjQ4jFWB7zPcUgFfEA8k42l8VAMBJUCMPa4wGl43LtuplWWpPFZsqYbunJj87HUI8YG/K9mrMbbBrDXHo1kx5On/QD/7gNCbW/5WgAAAAASUVORK5CYII=" alt="" data-v-cf733d88="">
+                            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABEAAAARCAMAAAAMs7fIAAAAY1BMVEUAAAAAiVsAjl4ApW0AqHAAiFwAiVwAilwAiFoAiFoAiVwAiVwAiVsAiVsAiFsAiVsAilwAi1wAi1wAjV0Aj18AhloAiVwAiFoAiVwAiVwAilwAiVwAiVwAjF4Ajl4AiFsAh1r4Oo8YAAAAH3RSTlMAcRoIBPt79u3o1tK+k4eDYEg6KgrxyMKyqppnVycW6LR5bwAAAIVJREFUGNNdkIkOgyAQRAcRvLVVex/D/39lYXVN9SVLMg9YNkA54cDksoN5st+Lb8HS7own+foXWRXIerY2zwHTNpUjQ4jFWB7zPcUgFfEA8k42l8VAMBJUCMPa4wGl43LtuplWWpPFZsqYbunJj87HUI8YG/K9mrMbbBrDXHo1kx5On/QD/7gNCbW/5WgAAAAASUVORK5CYII=" alt="" data-v-cf733d88="">
+                            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABEAAAARCAMAAAAMs7fIAAAAY1BMVEUAAAAAiVsAjl4ApW0AqHAAiFwAiVwAilwAiFoAiFoAiVwAiVwAiVsAiVsAiFsAiVsAilwAi1wAi1wAjV0Aj18AhloAiVwAiFoAiVwAiVwAilwAiVwAiVwAjF4Ajl4AiFsAh1r4Oo8YAAAAH3RSTlMAcRoIBPt79u3o1tK+k4eDYEg6KgrxyMKyqppnVycW6LR5bwAAAIVJREFUGNNdkIkOgyAQRAcRvLVVex/D/39lYXVN9SVLMg9YNkA54cDksoN5st+Lb8HS7own+foXWRXIerY2zwHTNpUjQ4jFWB7zPcUgFfEA8k42l8VAMBJUCMPa4wGl43LtuplWWpPFZsqYbunJj87HUI8YG/K9mrMbbBrDXHo1kx5On/QD/7gNCbW/5WgAAAAASUVORK5CYII=" alt="" data-v-cf733d88="">
+                            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABEAAAARCAMAAAAMs7fIAAAAY1BMVEUAAAAAiVsAjl4ApW0AqHAAiFwAiVwAilwAiFoAiFoAiVwAiVwAiVsAiVsAiFsAiVsAilwAi1wAi1wAjV0Aj18AhloAiVwAiFoAiVwAiVwAilwAiVwAiVwAjF4Ajl4AiFsAh1r4Oo8YAAAAH3RSTlMAcRoIBPt79u3o1tK+k4eDYEg6KgrxyMKyqppnVycW6LR5bwAAAIVJREFUGNNdkIkOgyAQRAcRvLVVex/D/39lYXVN9SVLMg9YNkA54cDksoN5st+Lb8HS7own+foXWRXIerY2zwHTNpUjQ4jFWB7zPcUgFfEA8k42l8VAMBJUCMPa4wGl43LtuplWWpPFZsqYbunJj87HUI8YG/K9mrMbbBrDXHo1kx5On/QD/7gNCbW/5WgAAAAASUVORK5CYII=" alt="" data-v-cf733d88="">
+                            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABEAAAARCAQAAACRZI9xAAAAyklEQVR4AWNAB6VxDPhBmWbJz2ppvEpKZhX/L2nDo6BBpOR78f/it32cuM2oBSoAwpJ07CYwlUoUv4AquVbC3cc5iX0mawNLAxNDSUHxnuJLQMk/YGlMWMPQwFWyCZsU1LxysBWrmEum4lBQhOzQ0uJ/GAry0H3TgqZgFaaHJ6IpOYGpZD+akq9A76KC4rdgqX8lh2CuKlNHjT4ZSJCVWwHj2rrkIohXGo6aBLyKf5U2NrAxwIKhoPhjcTuKknL3cm1Ui6skS5MgLAAe2rQWRd0/ggAAAABJRU5ErkJggg==" alt="" data-v-cf733d88="">
+                        </div>
+                    </div>
+                    <p data-v-cf733d88="">eu baixei um excelente aplicativo de jogos online AAJOGO. Isso é ótimo !!!</p>
+                </div>
+            </div>
+            <div class="evaluation" data-v-cf733d88="">
+                <img class="head" src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wgARCAA8ADwDAREAAhEBAxEB/8QAHAAAAgIDAQEAAAAAAAAAAAAABAUGBwACAwEI/8QAGAEAAwEBAAAAAAAAAAAAAAAAAAIDAQT/2gAMAwEAAhADEAAAAJdy9kqFP3CGFOLQVgNlm6NWCP8ASU2k2IUxTe1pdrrac4byCUH0mc2vSQDjUHTqHpHnsWGCGsz8DFNlryn18GlY7Rg2UHEXOiukgzGM76bnN52Tyd60RJSMseMDoqsNNPAtXi7krKtouNEGirWz3DULk4u+NsqZ0RV592wBjnhgf//EADQQAAEDAwMBBQUHBQAAAAAAAAECAwQABRESITEGBxNBUWEUIiNxlBUyUlWBsdEINJHB8f/aAAgBAQABPwDpOf0/f4aFW9mGp1KQVsrZQXE/PIyfnUe2W8gZgQ/p0fxTVqt35fC+mR/FJtVu/LoP0yP4rqqfYembU5MmQIClgfDZDDYU4ryG1XfreTcn1ksQ20ZJShuOhISP0FNdYSI7iFNiNlGwHs6D+4qwdqVmbtqEXmyRXpYJBcbjtALFdCwnrjfAY04W5mMkvSJZc0BlsEAkH5kACrN1HbJDDfd3KJJbHuB9t1J1Ebb+vrxTC0rQFIUFpPCknIptQNdvNvck3e1OrWfZRGd2H4goVIbbQSGxiggqWrJ2FB8gkA09cnhEcgpUfY3FpceQBuvRnSCfLfj9a+1ZgV8JwoHglvbHpT/aDe4bNnVEuDqDGY7slteNRznCgNq7Ku01zqy4mFKQz/ad+HBsoLCglSFDg8ggiv6jJL7FqtMqHstK3UKPoQk0Zzpjh1WxVtx41FkOOPaXMaTsdqbYUSvGdlEcV2h2ZuwXc2dp4u+yEoWvgLWTlRA8BwBSZLDMTuFMJUonUSOf8+FdNR7XMnhi4KebSvbSCMEeh8xVtur3Q/WMhUJ4upjuYSfB1GQcKHiCORUrre8395xq93F2UwTrbZWQG2z6Dw22qdIjKjMIbWglI3A86juNIUDnauk5/Z4zasX2XePbyslwMxgUD0SQdxXXsmTcr07KdRqWpRBx7ylHzNWzp0zYS3S+2h3khXh6Vcre5Z5EdxX3wsEFJ2OKvMoSri+8kEBasjVzSVlKwRyKy2vBGAkjy/3SHgCopyE13mSTk11DKiOdUzvsRDrUZC1Lb1q1YSPOn7q4kBC47OAd1JyCKvr3fMoSQSUqJBUsnn0roDsjmde9LzrrZ7tDRMiPllyJJBA4CgrvBmpNokwUuploQhaVlJSVA5wcHGP3p4KbVpBwCM4zxWs4xms1bYvcW+VJeT8SQrx/D/2nknUrIzq8auiNMX7ufe3V5VaL9c4FmnW6HMdZhS3EOPtIOA4Ug4z6b8VcpC33ApaiQUjbypeFHBpttlSTzqrBXuUAVc0hXeIPCUjFPtpCuKvRIiuAcECohOpQqSOadoKKckVrO9f/xAAdEQACAgMBAQEAAAAAAAAAAAAAAQIRAxASICET/9oACAECAQE/AK8IUSjkrz2KWlBH5oePoceBMQkWY7GmXyc9k8dESyjE6R39LsihlCWov4RVsizvVFbQtL0hef/EABsRAAIDAQEBAAAAAAAAAAAAAAABAgMRIBAS/9oACAEDAQE/AOMMN6rjo6R14YJjkfZpXJikyU2xpko4YZ5TNDkhtIdpZXpCvBxGyIpDfm6SeDGvNN4Y+5Euf//Z" alt="" data-v-cf733d88="">
+                <div class="evaluation-star" data-v-cf733d88="">
+                    <div class="user-info" data-v-cf733d88="">
+                        <div class="nick" data-v-cf733d88="">
+                            <h1 data-v-cf733d88="">rakxa</h1>
+                            <h2 data-v-cf733d88="">14.11.2022</h2>
+                        </div>
+                        <div class="star" data-v-cf733d88="">
+                            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABEAAAARCAMAAAAMs7fIAAAAY1BMVEUAAAAAiVsAjl4ApW0AqHAAiFwAiVwAilwAiFoAiFoAiVwAiVwAiVsAiVsAiFsAiVsAilwAi1wAi1wAjV0Aj18AhloAiVwAiFoAiVwAiVwAilwAiVwAiVwAjF4Ajl4AiFsAh1r4Oo8YAAAAH3RSTlMAcRoIBPt79u3o1tK+k4eDYEg6KgrxyMKyqppnVycW6LR5bwAAAIVJREFUGNNdkIkOgyAQRAcRvLVVex/D/39lYXVN9SVLMg9YNkA54cDksoN5st+Lb8HS7own+foXWRXIerY2zwHTNpUjQ4jFWB7zPcUgFfEA8k42l8VAMBJUCMPa4wGl43LtuplWWpPFZsqYbunJj87HUI8YG/K9mrMbbBrDXHo1kx5On/QD/7gNCbW/5WgAAAAASUVORK5CYII=" alt="" data-v-cf733d88="">
+                            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABEAAAARCAMAAAAMs7fIAAAAY1BMVEUAAAAAiVsAjl4ApW0AqHAAiFwAiVwAilwAiFoAiFoAiVwAiVwAiVsAiVsAiFsAiVsAilwAi1wAi1wAjV0Aj18AhloAiVwAiFoAiVwAiVwAilwAiVwAiVwAjF4Ajl4AiFsAh1r4Oo8YAAAAH3RSTlMAcRoIBPt79u3o1tK+k4eDYEg6KgrxyMKyqppnVycW6LR5bwAAAIVJREFUGNNdkIkOgyAQRAcRvLVVex/D/39lYXVN9SVLMg9YNkA54cDksoN5st+Lb8HS7own+foXWRXIerY2zwHTNpUjQ4jFWB7zPcUgFfEA8k42l8VAMBJUCMPa4wGl43LtuplWWpPFZsqYbunJj87HUI8YG/K9mrMbbBrDXHo1kx5On/QD/7gNCbW/5WgAAAAASUVORK5CYII=" alt="" data-v-cf733d88="">
+                            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABEAAAARCAMAAAAMs7fIAAAAY1BMVEUAAAAAiVsAjl4ApW0AqHAAiFwAiVwAilwAiFoAiFoAiVwAiVwAiVsAiVsAiFsAiVsAilwAi1wAi1wAjV0Aj18AhloAiVwAiFoAiVwAiVwAilwAiVwAiVwAjF4Ajl4AiFsAh1r4Oo8YAAAAH3RSTlMAcRoIBPt79u3o1tK+k4eDYEg6KgrxyMKyqppnVycW6LR5bwAAAIVJREFUGNNdkIkOgyAQRAcRvLVVex/D/39lYXVN9SVLMg9YNkA54cDksoN5st+Lb8HS7own+foXWRXIerY2zwHTNpUjQ4jFWB7zPcUgFfEA8k42l8VAMBJUCMPa4wGl43LtuplWWpPFZsqYbunJj87HUI8YG/K9mrMbbBrDXHo1kx5On/QD/7gNCbW/5WgAAAAASUVORK5CYII=" alt="" data-v-cf733d88="">
+                            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABEAAAARCAMAAAAMs7fIAAAAY1BMVEUAAAAAiVsAjl4ApW0AqHAAiFwAiVwAilwAiFoAiFoAiVwAiVwAiVsAiVsAiFsAiVsAilwAi1wAi1wAjV0Aj18AhloAiVwAiFoAiVwAiVwAilwAiVwAiVwAjF4Ajl4AiFsAh1r4Oo8YAAAAH3RSTlMAcRoIBPt79u3o1tK+k4eDYEg6KgrxyMKyqppnVycW6LR5bwAAAIVJREFUGNNdkIkOgyAQRAcRvLVVex/D/39lYXVN9SVLMg9YNkA54cDksoN5st+Lb8HS7own+foXWRXIerY2zwHTNpUjQ4jFWB7zPcUgFfEA8k42l8VAMBJUCMPa4wGl43LtuplWWpPFZsqYbunJj87HUI8YG/K9mrMbbBrDXHo1kx5On/QD/7gNCbW/5WgAAAAASUVORK5CYII=" alt="" data-v-cf733d88="">
+                            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABEAAAARCAQAAACRZI9xAAAAyklEQVR4AWNAB6VxDPhBmWbJz2ppvEpKZhX/L2nDo6BBpOR78f/it32cuM2oBSoAwpJ07CYwlUoUv4AquVbC3cc5iX0mawNLAxNDSUHxnuJLQMk/YGlMWMPQwFWyCZsU1LxysBWrmEum4lBQhOzQ0uJ/GAry0H3TgqZgFaaHJ6IpOYGpZD+akq9A76KC4rdgqX8lh2CuKlNHjT4ZSJCVWwHj2rrkIohXGo6aBLyKf5U2NrAxwIKhoPhjcTuKknL3cm1Ui6skS5MgLAAe2rQWRd0/ggAAAABJRU5ErkJggg==" alt="" data-v-cf733d88="">
+                        </div>
+                    </div>
+                    <p data-v-cf733d88="">Grande aplicação AAJOGO. estamos felizes em utilizá-la. Muito prático e fácil de entender... Os jogos são divertidos. Eu recomendo este aplicativo ......</p>
+                </div>
+            </div>
+            <div class="evaluation" data-v-cf733d88="">
+                <img class="head" src="data:image/jpeg;base64,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" alt="" data-v-cf733d88="">
+                <div class="evaluation-star" data-v-cf733d88="">
+                    <div class="user-info" data-v-cf733d88="">
+                        <div class="nick" data-v-cf733d88="">
+                            <h1 data-v-cf733d88="">runewall</h1>
+                            <h2 data-v-cf733d88="">15.11.2022</h2>
+                        </div>
+                        <div class="star" data-v-cf733d88="">
+                            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABEAAAARCAMAAAAMs7fIAAAAY1BMVEUAAAAAiVsAjl4ApW0AqHAAiFwAiVwAilwAiFoAiFoAiVwAiVwAiVsAiVsAiFsAiVsAilwAi1wAi1wAjV0Aj18AhloAiVwAiFoAiVwAiVwAilwAiVwAiVwAjF4Ajl4AiFsAh1r4Oo8YAAAAH3RSTlMAcRoIBPt79u3o1tK+k4eDYEg6KgrxyMKyqppnVycW6LR5bwAAAIVJREFUGNNdkIkOgyAQRAcRvLVVex/D/39lYXVN9SVLMg9YNkA54cDksoN5st+Lb8HS7own+foXWRXIerY2zwHTNpUjQ4jFWB7zPcUgFfEA8k42l8VAMBJUCMPa4wGl43LtuplWWpPFZsqYbunJj87HUI8YG/K9mrMbbBrDXHo1kx5On/QD/7gNCbW/5WgAAAAASUVORK5CYII=" alt="" data-v-cf733d88="">
+                            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABEAAAARCAMAAAAMs7fIAAAAY1BMVEUAAAAAiVsAjl4ApW0AqHAAiFwAiVwAilwAiFoAiFoAiVwAiVwAiVsAiVsAiFsAiVsAilwAi1wAi1wAjV0Aj18AhloAiVwAiFoAiVwAiVwAilwAiVwAiVwAjF4Ajl4AiFsAh1r4Oo8YAAAAH3RSTlMAcRoIBPt79u3o1tK+k4eDYEg6KgrxyMKyqppnVycW6LR5bwAAAIVJREFUGNNdkIkOgyAQRAcRvLVVex/D/39lYXVN9SVLMg9YNkA54cDksoN5st+Lb8HS7own+foXWRXIerY2zwHTNpUjQ4jFWB7zPcUgFfEA8k42l8VAMBJUCMPa4wGl43LtuplWWpPFZsqYbunJj87HUI8YG/K9mrMbbBrDXHo1kx5On/QD/7gNCbW/5WgAAAAASUVORK5CYII=" alt="" data-v-cf733d88="">
+                            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABEAAAARCAMAAAAMs7fIAAAAY1BMVEUAAAAAiVsAjl4ApW0AqHAAiFwAiVwAilwAiFoAiFoAiVwAiVwAiVsAiVsAiFsAiVsAilwAi1wAi1wAjV0Aj18AhloAiVwAiFoAiVwAiVwAilwAiVwAiVwAjF4Ajl4AiFsAh1r4Oo8YAAAAH3RSTlMAcRoIBPt79u3o1tK+k4eDYEg6KgrxyMKyqppnVycW6LR5bwAAAIVJREFUGNNdkIkOgyAQRAcRvLVVex/D/39lYXVN9SVLMg9YNkA54cDksoN5st+Lb8HS7own+foXWRXIerY2zwHTNpUjQ4jFWB7zPcUgFfEA8k42l8VAMBJUCMPa4wGl43LtuplWWpPFZsqYbunJj87HUI8YG/K9mrMbbBrDXHo1kx5On/QD/7gNCbW/5WgAAAAASUVORK5CYII=" alt="" data-v-cf733d88="">
+                            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABEAAAARCAMAAAAMs7fIAAAAY1BMVEUAAAAAiVsAjl4ApW0AqHAAiFwAiVwAilwAiFoAiFoAiVwAiVwAiVsAiVsAiFsAiVsAilwAi1wAi1wAjV0Aj18AhloAiVwAiFoAiVwAiVwAilwAiVwAiVwAjF4Ajl4AiFsAh1r4Oo8YAAAAH3RSTlMAcRoIBPt79u3o1tK+k4eDYEg6KgrxyMKyqppnVycW6LR5bwAAAIVJREFUGNNdkIkOgyAQRAcRvLVVex/D/39lYXVN9SVLMg9YNkA54cDksoN5st+Lb8HS7own+foXWRXIerY2zwHTNpUjQ4jFWB7zPcUgFfEA8k42l8VAMBJUCMPa4wGl43LtuplWWpPFZsqYbunJj87HUI8YG/K9mrMbbBrDXHo1kx5On/QD/7gNCbW/5WgAAAAASUVORK5CYII=" alt="" data-v-cf733d88="">
+                            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABEAAAARCAMAAAAMs7fIAAAAY1BMVEUAAAAAiVsAjl4ApW0AqHAAiFwAiVwAilwAiFoAiFoAiVwAiVwAiVsAiVsAiFsAiVsAilwAi1wAi1wAjV0Aj18AhloAiVwAiFoAiVwAiVwAilwAiVwAiVwAjF4Ajl4AiFsAh1r4Oo8YAAAAH3RSTlMAcRoIBPt79u3o1tK+k4eDYEg6KgrxyMKyqppnVycW6LR5bwAAAIVJREFUGNNdkIkOgyAQRAcRvLVVex/D/39lYXVN9SVLMg9YNkA54cDksoN5st+Lb8HS7own+foXWRXIerY2zwHTNpUjQ4jFWB7zPcUgFfEA8k42l8VAMBJUCMPa4wGl43LtuplWWpPFZsqYbunJj87HUI8YG/K9mrMbbBrDXHo1kx5On/QD/7gNCbW/5WgAAAAASUVORK5CYII=" alt="" data-v-cf733d88="">
+                        </div>
+                    </div>
+                    <p data-v-cf733d88="">O aplicativo AAJOGO é muito legal, eu realmente gosto muito da AAJOGO. Recomendo a AAJOGO a todos porque é muito legal, vá e faça o download!</p>
+                </div>
+            </div>
+            <div class="evaluation" data-v-cf733d88="">
+                <img class="head" src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAcFBQYFBAcGBgYIBwcICxILCwoKCxYPEA0SGhYbGhkWGRgcICgiHB4mHhgZIzAkJiorLS4tGyIyNTEsNSgsLSz/2wBDAQcICAsJCxULCxUsHRkdLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCz/wgARCAA8ADwDAREAAhEBAxEB/8QAHAAAAgMAAwEAAAAAAAAAAAAABAYCAwUAAQcI/8QAGQEAAgMBAAAAAAAAAAAAAAAAAgMABAUB/9oADAMBAAIQAxAAAACGsoTshUau9HYsgYwLyhPZJBipYpZFrIbw4xddaoS4L5OVztruHxtLAbw8lm7WaQ9ZUnSGRqWU7Mu2ENRdbNfOMsVyZCa7QANXydLK5yTFvm3nkGsqTcz3YxEmZehkQmG5V0LlOrkarAMOPbWIxMW1bEvQbFdXYlGHjIY+rLsYslpCFVtV9B2er58ERuc//8QALhAAAgEDAwMCBQMFAAAAAAAAAQIDAAQRBRIhBjFBE2EiMlFxgSMkoSVDUrHB/9oACAEBAAE/AJV706VqRtdMtVee6R5X/toc7fuaHVNvvwYHA/yBB/irS8t71N0EgfHcdiPxSJUaUqcVItSwyyRyLCpaTadozitR0TUbqRm9NiuSAc8E+cGjoF+spBhI57nxVlpl/ZXIYIytjcDng+1LFjAyDwOR2qOOhGadK0uCOXVIo5vkcMrflTXVOoafp06Wb3MUBSNP0lOSpx596N7bCL1fVynfI5rRtY0i/eS1k3tvjKo7RkAP45pIsADGOKijpYuKlgwzDHY1aMba7jlClgsiEgfTcM/itf0eabUpXEhCvIzHsM81DpBjsxbOQzSKfjz/ANrQNJS31WPExceoDkueOagt3SMCRdr5JIHYcmooqEdXtrsuJAR5/wBiihQkjjIwftXUMjrdtzhPNJd3crB4Lh2RMbfTj4H2NWHqS6sjqHCs3xFhjcc9xSR5OTUUVCKtb0uSCUM4IDIp/gUulz3CSSJGViRSxdhgHA7D6k/StTltbyaORGwhGFY8Z581c2x9YY2qvkDtWi2If9w4yRwprUdZs9Et/wB1EHM3yNk5TH0HY54HNdPdWWfUV89vFZm0dVyiAlw6juxPg+3aki+Gtd6kspJoY4yjuUDozx7hzWo6yWmGZhIynJQvwD44rX9HcRyXdqu+FyXkRR8h8sB9D39qSGaRd2/co7c10lDbXenPHJv3xBWOw9lOecfcEV170tcwf1e3kM1qTl0OQ0fPfb2xxzg1a3d1YXjPbSvE4Y8o2PNDr3XERQZwTitXISNJAql1jXBIqzgjlW4idAwWTgnv2q1YvfyxE4RRgAfitb0eytJopoYthnJDqPlPvjwa6JlePqi1iB+CWGVH9wMEVqMEQtpl9NShCttI45ByPtWv20Vh1DfW0C4ihndEB8AUSeOa/8QAIREAAgEEAwADAQAAAAAAAAAAAAIBAwQQERIhMRMiM0L/2gAIAQIBAT8Ag5cSbkW4Fqm95n0up4qK2zYlTspdxmPC8/MpqLBEakot9c/yXn5lPwiexp7KHmVnQ9PnBK6xC8mFjS5RtjVeI7C9lvGx6minU2bzKETopMOxE6PkzI5SJz//xAAfEQACAQQDAQEAAAAAAAAAAAAAAQIDEBESEyAhMQT/2gAIAQMBAT8AMZOI0HHoyCyaM4iUCS6UV6PAmhvKJfen50OmxUyMPCssO7ISN8oRN4J+mLYIwIxtXZH0atGymfSrE1NTUiO1Iq9P/9k=" alt="" data-v-cf733d88="">
+                <div class="evaluation-star" data-v-cf733d88="">
+                    <div class="user-info" data-v-cf733d88="">
+                        <div class="nick" data-v-cf733d88="">
+                            <h1 data-v-cf733d88="">Bonduelle</h1>
+                            <h2 data-v-cf733d88="">18.11.2022</h2>
+                        </div>
+                        <div class="star" data-v-cf733d88="">
+                            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABEAAAARCAMAAAAMs7fIAAAAY1BMVEUAAAAAiVsAjl4ApW0AqHAAiFwAiVwAilwAiFoAiFoAiVwAiVwAiVsAiVsAiFsAiVsAilwAi1wAi1wAjV0Aj18AhloAiVwAiFoAiVwAiVwAilwAiVwAiVwAjF4Ajl4AiFsAh1r4Oo8YAAAAH3RSTlMAcRoIBPt79u3o1tK+k4eDYEg6KgrxyMKyqppnVycW6LR5bwAAAIVJREFUGNNdkIkOgyAQRAcRvLVVex/D/39lYXVN9SVLMg9YNkA54cDksoN5st+Lb8HS7own+foXWRXIerY2zwHTNpUjQ4jFWB7zPcUgFfEA8k42l8VAMBJUCMPa4wGl43LtuplWWpPFZsqYbunJj87HUI8YG/K9mrMbbBrDXHo1kx5On/QD/7gNCbW/5WgAAAAASUVORK5CYII=" alt="" data-v-cf733d88="">
+                            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABEAAAARCAMAAAAMs7fIAAAAY1BMVEUAAAAAiVsAjl4ApW0AqHAAiFwAiVwAilwAiFoAiFoAiVwAiVwAiVsAiVsAiFsAiVsAilwAi1wAi1wAjV0Aj18AhloAiVwAiFoAiVwAiVwAilwAiVwAiVwAjF4Ajl4AiFsAh1r4Oo8YAAAAH3RSTlMAcRoIBPt79u3o1tK+k4eDYEg6KgrxyMKyqppnVycW6LR5bwAAAIVJREFUGNNdkIkOgyAQRAcRvLVVex/D/39lYXVN9SVLMg9YNkA54cDksoN5st+Lb8HS7own+foXWRXIerY2zwHTNpUjQ4jFWB7zPcUgFfEA8k42l8VAMBJUCMPa4wGl43LtuplWWpPFZsqYbunJj87HUI8YG/K9mrMbbBrDXHo1kx5On/QD/7gNCbW/5WgAAAAASUVORK5CYII=" alt="" data-v-cf733d88="">
+                            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABEAAAARCAMAAAAMs7fIAAAAY1BMVEUAAAAAiVsAjl4ApW0AqHAAiFwAiVwAilwAiFoAiFoAiVwAiVwAiVsAiVsAiFsAiVsAilwAi1wAi1wAjV0Aj18AhloAiVwAiFoAiVwAiVwAilwAiVwAiVwAjF4Ajl4AiFsAh1r4Oo8YAAAAH3RSTlMAcRoIBPt79u3o1tK+k4eDYEg6KgrxyMKyqppnVycW6LR5bwAAAIVJREFUGNNdkIkOgyAQRAcRvLVVex/D/39lYXVN9SVLMg9YNkA54cDksoN5st+Lb8HS7own+foXWRXIerY2zwHTNpUjQ4jFWB7zPcUgFfEA8k42l8VAMBJUCMPa4wGl43LtuplWWpPFZsqYbunJj87HUI8YG/K9mrMbbBrDXHo1kx5On/QD/7gNCbW/5WgAAAAASUVORK5CYII=" alt="" data-v-cf733d88="">
+                            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABEAAAARCAMAAAAMs7fIAAAAY1BMVEUAAAAAiVsAjl4ApW0AqHAAiFwAiVwAilwAiFoAiFoAiVwAiVwAiVsAiVsAiFsAiVsAilwAi1wAi1wAjV0Aj18AhloAiVwAiFoAiVwAiVwAilwAiVwAiVwAjF4Ajl4AiFsAh1r4Oo8YAAAAH3RSTlMAcRoIBPt79u3o1tK+k4eDYEg6KgrxyMKyqppnVycW6LR5bwAAAIVJREFUGNNdkIkOgyAQRAcRvLVVex/D/39lYXVN9SVLMg9YNkA54cDksoN5st+Lb8HS7own+foXWRXIerY2zwHTNpUjQ4jFWB7zPcUgFfEA8k42l8VAMBJUCMPa4wGl43LtuplWWpPFZsqYbunJj87HUI8YG/K9mrMbbBrDXHo1kx5On/QD/7gNCbW/5WgAAAAASUVORK5CYII=" alt="" data-v-cf733d88="">
+                            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABEAAAARCAQAAACRZI9xAAAAyklEQVR4AWNAB6VxDPhBmWbJz2ppvEpKZhX/L2nDo6BBpOR78f/it32cuM2oBSoAwpJ07CYwlUoUv4AquVbC3cc5iX0mawNLAxNDSUHxnuJLQMk/YGlMWMPQwFWyCZsU1LxysBWrmEum4lBQhOzQ0uJ/GAry0H3TgqZgFaaHJ6IpOYGpZD+akq9A76KC4rdgqX8lh2CuKlNHjT4ZSJCVWwHj2rrkIohXGo6aBLyKf5U2NrAxwIKhoPhjcTuKknL3cm1Ui6skS5MgLAAe2rQWRd0/ggAAAABJRU5ErkJggg==" alt="" data-v-cf733d88="">
+                        </div>
+                    </div>
+                    <p data-v-cf733d88="">Eu realmente gostei muito deste jogo maravilhoso muitos bons pontos muitas emoções positivas muitos extras se houver algumas falhas que merecem ser melhoradas mas no geral eu estou feliz com o aplicativo e o fato de que o AAJOGO faz um ótimo trabalho AAJOGO me agrada perfeitamente e eu realmente gosto de toda a luz e bom humor</p>
+                </div>
+            </div>
+            <div class="evaluation" data-v-cf733d88="" >
+                <img class="head" src="data:image/jpeg;base64,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" alt="" data-v-cf733d88="">
+                <div class="evaluation-star" data-v-cf733d88="">
+                    <div class="user-info" data-v-cf733d88="">
+                        <div class="nick" data-v-cf733d88="">
+                            <h1 data-v-cf733d88="">Masses of Palpur</h1>
+                            <h2 data-v-cf733d88="">16.11.2022</h2>
+                        </div>
+                        <div class="star" data-v-cf733d88="">
+                            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABEAAAARCAMAAAAMs7fIAAAAY1BMVEUAAAAAiVsAjl4ApW0AqHAAiFwAiVwAilwAiFoAiFoAiVwAiVwAiVsAiVsAiFsAiVsAilwAi1wAi1wAjV0Aj18AhloAiVwAiFoAiVwAiVwAilwAiVwAiVwAjF4Ajl4AiFsAh1r4Oo8YAAAAH3RSTlMAcRoIBPt79u3o1tK+k4eDYEg6KgrxyMKyqppnVycW6LR5bwAAAIVJREFUGNNdkIkOgyAQRAcRvLVVex/D/39lYXVN9SVLMg9YNkA54cDksoN5st+Lb8HS7own+foXWRXIerY2zwHTNpUjQ4jFWB7zPcUgFfEA8k42l8VAMBJUCMPa4wGl43LtuplWWpPFZsqYbunJj87HUI8YG/K9mrMbbBrDXHo1kx5On/QD/7gNCbW/5WgAAAAASUVORK5CYII=" alt="" data-v-cf733d88="">
+                            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABEAAAARCAMAAAAMs7fIAAAAY1BMVEUAAAAAiVsAjl4ApW0AqHAAiFwAiVwAilwAiFoAiFoAiVwAiVwAiVsAiVsAiFsAiVsAilwAi1wAi1wAjV0Aj18AhloAiVwAiFoAiVwAiVwAilwAiVwAiVwAjF4Ajl4AiFsAh1r4Oo8YAAAAH3RSTlMAcRoIBPt79u3o1tK+k4eDYEg6KgrxyMKyqppnVycW6LR5bwAAAIVJREFUGNNdkIkOgyAQRAcRvLVVex/D/39lYXVN9SVLMg9YNkA54cDksoN5st+Lb8HS7own+foXWRXIerY2zwHTNpUjQ4jFWB7zPcUgFfEA8k42l8VAMBJUCMPa4wGl43LtuplWWpPFZsqYbunJj87HUI8YG/K9mrMbbBrDXHo1kx5On/QD/7gNCbW/5WgAAAAASUVORK5CYII=" alt="" data-v-cf733d88="">
+                            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABEAAAARCAMAAAAMs7fIAAAAY1BMVEUAAAAAiVsAjl4ApW0AqHAAiFwAiVwAilwAiFoAiFoAiVwAiVwAiVsAiVsAiFsAiVsAilwAi1wAi1wAjV0Aj18AhloAiVwAiFoAiVwAiVwAilwAiVwAiVwAjF4Ajl4AiFsAh1r4Oo8YAAAAH3RSTlMAcRoIBPt79u3o1tK+k4eDYEg6KgrxyMKyqppnVycW6LR5bwAAAIVJREFUGNNdkIkOgyAQRAcRvLVVex/D/39lYXVN9SVLMg9YNkA54cDksoN5st+Lb8HS7own+foXWRXIerY2zwHTNpUjQ4jFWB7zPcUgFfEA8k42l8VAMBJUCMPa4wGl43LtuplWWpPFZsqYbunJj87HUI8YG/K9mrMbbBrDXHo1kx5On/QD/7gNCbW/5WgAAAAASUVORK5CYII=" alt="" data-v-cf733d88="">
+                            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABEAAAARCAMAAAAMs7fIAAAAY1BMVEUAAAAAiVsAjl4ApW0AqHAAiFwAiVwAilwAiFoAiFoAiVwAiVwAiVsAiVsAiFsAiVsAilwAi1wAi1wAjV0Aj18AhloAiVwAiFoAiVwAiVwAilwAiVwAiVwAjF4Ajl4AiFsAh1r4Oo8YAAAAH3RSTlMAcRoIBPt79u3o1tK+k4eDYEg6KgrxyMKyqppnVycW6LR5bwAAAIVJREFUGNNdkIkOgyAQRAcRvLVVex/D/39lYXVN9SVLMg9YNkA54cDksoN5st+Lb8HS7own+foXWRXIerY2zwHTNpUjQ4jFWB7zPcUgFfEA8k42l8VAMBJUCMPa4wGl43LtuplWWpPFZsqYbunJj87HUI8YG/K9mrMbbBrDXHo1kx5On/QD/7gNCbW/5WgAAAAASUVORK5CYII=" alt="" data-v-cf733d88="">
+                            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABEAAAARCAQAAACRZI9xAAAAyklEQVR4AWNAB6VxDPhBmWbJz2ppvEpKZhX/L2nDo6BBpOR78f/it32cuM2oBSoAwpJ07CYwlUoUv4AquVbC3cc5iX0mawNLAxNDSUHxnuJLQMk/YGlMWMPQwFWyCZsU1LxysBWrmEum4lBQhOzQ0uJ/GAry0H3TgqZgFaaHJ6IpOYGpZD+akq9A76KC4rdgqX8lh2CuKlNHjT4ZSJCVWwHj2rrkIohXGo6aBLyKf5U2NrAxwIKhoPhjcTuKknL3cm1Ui6skS5MgLAAe2rQWRd0/ggAAAABJRU5ErkJggg==" alt="" data-v-cf733d88="">
+                        </div>
+                    </div>
+                    <p data-v-cf733d88="">Uma boa aplicação, há muitos jogos bons que você pode jogar. AAJOGO é um ótimo jogo online. Eu mesmo joguei e ganhei muitas vitórias a longo prazo. Eu sugiro que você entre e jogue,Experimente.Confie em mim!</p>
+                </div>
+            </div>
+            <div class="evaluation" data-v-cf733d88="">
+                <img class="head" src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wgARCAA8ADwDAREAAhEBAxEB/8QAHAAAAQQDAQAAAAAAAAAAAAAABgQFBwgAAQMC/8QAGQEAAgMBAAAAAAAAAAAAAAAAAAIBAwQF/9oADAMBAAIQAxAAAAC0pCMXTCEhzhu4I5VtZCKu/wAkbJ8EBF1T8jvCP1I2TgYQA2JDL2KLKbJ5bVKzkmB5IrpevLD0k+vLYtKl6mpjAG3SssaTDB002zBZGc3cBTLR5e+FNQI4+gY5tAr1uVbqtOoR/jqH6uqIPJGo6V2MeugzU1fxole4/wCT2q+b8h8UyRl3whuzTHi0pp4H/8QAMxAAAgEDAQUGBAUFAAAAAAAAAQIDBAURAAYSEzFBByEiUWGRFDKBsRAgQnHRFSMzU3L/2gAIAQEAAT8AmUPGwI3h5YzpoXSOVWLzK36AAoGcDu+/1OmpOJNxZFDsoAVD8q+vqeWoUlaqlYrwawpkFRnA3uWT3Hr76BYNGzeD9LK3Uny89RMzM+VIAxgnr3aFPBR8YozK8r7xJyTk9B7a+ErKWecRVUJEj8QlkUHJA/B13wVb5SNKAFwOQ1uIhZzgDmSemrt2h2ekq+BGslUVbHEQAKD6E62e2kt16jC0s44/NomPiH8/TUsCSoytkZBGQe/v1ujyH5O1K+/A0UVthbElV/kPknl9dWyhNyqXqZiTHnwKDyHTOpKWosNxoqqlncDiDryOdW6Vp6Gnlf5nQE/vj8hIAJJwBrbS5vftp5zFJhXcxRHnuryz7atVrrYK9IWkhkdVPjjTdO7jrjVXPUVVTBT1iSpuzArvKMEDyPP31YiTZ6InmYl+35O0C7pZtk6+pLhHZDFGT5t3as93jqrtLEjeJI8qwPUk51YpKmN1eRn4yg5MTfN64OrldVe422gUDjyS7+7nJVemfrqih4FHBD/rjVPYY/D+oNBSmfiEyFiuQeeOQ9zjS7TrSUoFT/fmxnw93vrtZul1v92oqaep4VDMzJFHH0YDOPXOrFs8LdPI+8WZ8Dez36i+OWjl4CIZCpCtu9+dbIWm42/a6C4XffkhEqySzMMkYYcx5ftqCaOeFZYXV43GVZTkEfhTxVtdTW2pp4DKpj33w6jByT8pOT01RMa2rkZhgFj3eWu016WC20lQkqRVFLcEI8yAG3h7aoKShudBBX0qpLDOodWxg48j6jlqmo4kdwqgKwHd5a2+lgpKW20sQWI1dWkbNyO6PE3vgDWxN0LMEEhMbdwHTVVtLeo53RIoCFJH6f51twgl2jtCHIDGJSVJBxxCv21s6BxGPrrtcrJ5Ns6+B3JhhmconQZOuwC41M9rulDK+YKZ9+L0zpWbjt367b7pVnauOm4mIaeFTGPIuTk67NSfhqP/AIX7DV7r54LxWxxsN0St99f/xAAiEQACAgEEAgMBAAAAAAAAAAAAAQIDEQQQEiATISIxQTL/2gAIAQIBAT8A64QjPWNDJ1tbZ3RTD3ksv4lNvND6t8Ik7OZp5KKH0qi5M1bwiMmaaD3VorCq5RWS7U82K1KRXalHfx/pOePRR8kThhnHBV9EJ4Z5kQXxLf6NGlgvWGMoXo/dv//EACARAAIDAAIDAAMAAAAAAAAAAAABAgMRBBIQIDIhIkH/2gAIAQMBAT8A8YYazWNGesrEQsT8Z6WS1YVcfuX0dGL0/hXDuyqHU5MXL0wnPojhPWdUi+xecZXBssq7Mop6InF4XUtvyvyyuGosSjhU09G9Gi6H6kpNMh9FXycx5hxZN74sk9J/JZ9M/9k=" alt="" data-v-cf733d88="">
+                <div class="evaluation-star" data-v-cf733d88="">
+                    <div class="user-info" data-v-cf733d88="">
+                        <div class="nick" data-v-cf733d88="">
+                            <h1 data-v-cf733d88="">MrBubleGum</h1>
+                            <h2 data-v-cf733d88="">17.11.2022</h2>
+                        </div>
+                        <div class="star" data-v-cf733d88="">
+                            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABEAAAARCAMAAAAMs7fIAAAAY1BMVEUAAAAAiVsAjl4ApW0AqHAAiFwAiVwAilwAiFoAiFoAiVwAiVwAiVsAiVsAiFsAiVsAilwAi1wAi1wAjV0Aj18AhloAiVwAiFoAiVwAiVwAilwAiVwAiVwAjF4Ajl4AiFsAh1r4Oo8YAAAAH3RSTlMAcRoIBPt79u3o1tK+k4eDYEg6KgrxyMKyqppnVycW6LR5bwAAAIVJREFUGNNdkIkOgyAQRAcRvLVVex/D/39lYXVN9SVLMg9YNkA54cDksoN5st+Lb8HS7own+foXWRXIerY2zwHTNpUjQ4jFWB7zPcUgFfEA8k42l8VAMBJUCMPa4wGl43LtuplWWpPFZsqYbunJj87HUI8YG/K9mrMbbBrDXHo1kx5On/QD/7gNCbW/5WgAAAAASUVORK5CYII=" alt="" data-v-cf733d88="">
+                            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABEAAAARCAMAAAAMs7fIAAAAY1BMVEUAAAAAiVsAjl4ApW0AqHAAiFwAiVwAilwAiFoAiFoAiVwAiVwAiVsAiVsAiFsAiVsAilwAi1wAi1wAjV0Aj18AhloAiVwAiFoAiVwAiVwAilwAiVwAiVwAjF4Ajl4AiFsAh1r4Oo8YAAAAH3RSTlMAcRoIBPt79u3o1tK+k4eDYEg6KgrxyMKyqppnVycW6LR5bwAAAIVJREFUGNNdkIkOgyAQRAcRvLVVex/D/39lYXVN9SVLMg9YNkA54cDksoN5st+Lb8HS7own+foXWRXIerY2zwHTNpUjQ4jFWB7zPcUgFfEA8k42l8VAMBJUCMPa4wGl43LtuplWWpPFZsqYbunJj87HUI8YG/K9mrMbbBrDXHo1kx5On/QD/7gNCbW/5WgAAAAASUVORK5CYII=" alt="" data-v-cf733d88="">
+                            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABEAAAARCAMAAAAMs7fIAAAAY1BMVEUAAAAAiVsAjl4ApW0AqHAAiFwAiVwAilwAiFoAiFoAiVwAiVwAiVsAiVsAiFsAiVsAilwAi1wAi1wAjV0Aj18AhloAiVwAiFoAiVwAiVwAilwAiVwAiVwAjF4Ajl4AiFsAh1r4Oo8YAAAAH3RSTlMAcRoIBPt79u3o1tK+k4eDYEg6KgrxyMKyqppnVycW6LR5bwAAAIVJREFUGNNdkIkOgyAQRAcRvLVVex/D/39lYXVN9SVLMg9YNkA54cDksoN5st+Lb8HS7own+foXWRXIerY2zwHTNpUjQ4jFWB7zPcUgFfEA8k42l8VAMBJUCMPa4wGl43LtuplWWpPFZsqYbunJj87HUI8YG/K9mrMbbBrDXHo1kx5On/QD/7gNCbW/5WgAAAAASUVORK5CYII=" alt="" data-v-cf733d88="">
+                            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABEAAAARCAMAAAAMs7fIAAAAY1BMVEUAAAAAiVsAjl4ApW0AqHAAiFwAiVwAilwAiFoAiFoAiVwAiVwAiVsAiVsAiFsAiVsAilwAi1wAi1wAjV0Aj18AhloAiVwAiFoAiVwAiVwAilwAiVwAiVwAjF4Ajl4AiFsAh1r4Oo8YAAAAH3RSTlMAcRoIBPt79u3o1tK+k4eDYEg6KgrxyMKyqppnVycW6LR5bwAAAIVJREFUGNNdkIkOgyAQRAcRvLVVex/D/39lYXVN9SVLMg9YNkA54cDksoN5st+Lb8HS7own+foXWRXIerY2zwHTNpUjQ4jFWB7zPcUgFfEA8k42l8VAMBJUCMPa4wGl43LtuplWWpPFZsqYbunJj87HUI8YG/K9mrMbbBrDXHo1kx5On/QD/7gNCbW/5WgAAAAASUVORK5CYII=" alt="" data-v-cf733d88="">
+                            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABEAAAARCAMAAAAMs7fIAAAAY1BMVEUAAAAAiVsAjl4ApW0AqHAAiFwAiVwAilwAiFoAiFoAiVwAiVwAiVsAiVsAiFsAiVsAilwAi1wAi1wAjV0Aj18AhloAiVwAiFoAiVwAiVwAilwAiVwAiVwAjF4Ajl4AiFsAh1r4Oo8YAAAAH3RSTlMAcRoIBPt79u3o1tK+k4eDYEg6KgrxyMKyqppnVycW6LR5bwAAAIVJREFUGNNdkIkOgyAQRAcRvLVVex/D/39lYXVN9SVLMg9YNkA54cDksoN5st+Lb8HS7own+foXWRXIerY2zwHTNpUjQ4jFWB7zPcUgFfEA8k42l8VAMBJUCMPa4wGl43LtuplWWpPFZsqYbunJj87HUI8YG/K9mrMbbBrDXHo1kx5On/QD/7gNCbW/5WgAAAAASUVORK5CYII=" alt="" data-v-cf733d88="">
+                        </div>
+                    </div>
+                    <p data-v-cf733d88="">Eu Já joguei em muitos jogos online. A AAJOGO é a melhor em todos os aspectos. Eu o recomendo. Linhas chiques, design agradável, ótima experiência, menu de aplicações convincente . Quero dar uma atenção especial ao apoio!</p>
+                </div>
+            </div>
+        <div>
+             <!-- End Here -->
+
+             
+        <div class="more" data-v-cf733d88="">Ocultar comentários</div>
+
+            <script>
+                const evaluationContainer = document.querySelector('.evaluation-container');
+            const evaluations = document.querySelectorAll('.evaluation');
+            const moreButton = document.querySelector('.more');
+
+            const defaultVisibleCount = 4;
+
+            // Show the first 'defaultVisibleCount' evaluations by default
+            for (let i = 0; i < evaluations.length; i++) {
+            if (i < defaultVisibleCount) {
+                evaluations[i].style.display = 'block';
+            } else {
+                evaluations[i].style.display = 'none';
+            }
+            }
+
+            // Event listener for the "Ocultar comentários" button
+            moreButton.addEventListener('click', function() {
+            // Toggle display for the remaining evaluations
+            for (let i = defaultVisibleCount; i < evaluations.length; i++) {
+                if (evaluations[i].style.display === 'none') {
+                evaluations[i].style.display = 'block';
+                moreButton.textContent = 'Todos os comentários';
+                } else {
+                evaluations[i].style.display = 'none';
+                moreButton.textContent = 'Ocultar comentários';
+                }
+            }
+            
+            // Scroll to the top of the container after toggling
+            evaluationContainer.scrollTop = 0;
+            });
+            </script>
+ 
+        <div class="line-module" data-v-cf733d88="">
+            <div class="van-hairline--surround" data-v-cf733d88=""></div>
+        </div>
+
+        <div class="footer-module" data-v-cf733d88="">
+            <h1 data-v-cf733d88="">Quais são as novidades?</h1>
+            <h2 data-v-cf733d88="">Cadastre-se e receba 300 recompensas grátis</h2>
+            <div class="line-module" data-v-cf733d88="">
+                <div class="van-hairline--surround" data-v-cf733d88=""> </div>
+            </div>
+            <h3 data-v-cf733d88="">Informações adicionais</h3>
+            <ul class="app-info" data-v-cf733d88="">
+                <li data-v-cf733d88="">
+                    <div class="name" data-v-cf733d88="">Atualizações</div>
+                    <div class="time" data-v-cf733d88="">28.10.2022</div>
+                </li>
+                <li data-v-cf733d88="">
+                    <div class="name" data-v-cf733d88="">Tamanho</div>
+                    <div class="time" data-v-cf733d88="">12.5M</div>
+                </li>
+                <li data-v-cf733d88="">
+                    <div class="name" data-v-cf733d88="">Instalado</div>
+                    <div class="time" data-v-cf733d88="">10000</div>
+                </li>
+                <li data-v-cf733d88="">
+                    <div class="name" data-v-cf733d88="">Versão atual</div>
+                    <div class="time" data-v-cf733d88="">1.0</div>
+                </li>
+                <li data-v-cf733d88="">
+                    <div class="name" data-v-cf733d88="">Idade</div>
+                    <div class="time" data-v-cf733d88="">18+</div>
+                </li>
+                <li data-v-cf733d88="">
+                    <div class="name" data-v-cf733d88="">Desenvolvedores</div>
+                    <div class="time" data-v-cf733d88="">Tom Dev</div>
+                </li>
+            </ul>
+                <div class="line-module" data-v-cf733d88="">
+                        <div class="van-hairline--surround" data-v-cf733d88=""></div>
+                </div>
+        </div>
+        
+            <script>
+            if ("serviceWorker" in navigator) {
+                window.addEventListener("load", function () {
+                navigator.serviceWorker
+                    .register("/sw.js")
+                    .then(function (registration) {
+                    // 注册成功
+                    console.log(
+                        "ServiceWorker registration successful with scope: ",
+                        registration.scope
+                    );
+                    })
+                    .catch(function (err) {
+                    // 注册失败:
+                    console.log("ServiceWorker registration failed: ", err);
+                    });
+                });
+            }
+            </script>
+ </div>
+
+</body>
+</html>
